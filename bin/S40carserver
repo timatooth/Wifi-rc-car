@@ -1,0 +1,5 @@
+#this file goes in /etc/init.d/<filename>
+#make sure it is executable or it will not start at boot time
+/usr/sbin/setserial /dev/tts/1 irq 3
+/usr/sbin/stty -F /dev/tts/1 raw speed 9600
+/bin/carserver &
